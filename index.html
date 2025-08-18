@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto TIE - Aprender. Entender. Dominar.</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icon-TIE.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icon-TIE.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="assets/icon-TIE.png">
+    <link rel="icon" type="image/png" sizes="128x128" href="assets/icon-TIE.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icon-TIE.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-TIE.png">
+    <link rel="icon" type="image/png" sizes="256x256" href="assets/icon-TIE.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/icon-TIE.png">
+
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Custom styles to apply the Inter font */
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        /* Simple animation for section headers */
+        h2 {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 8px;
+        }
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: #4f46e5; /* Indigo color for accent */
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header Section -->
+    <header class="bg-white shadow-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="assets/logo_tie.png" alt="Projeto TIE" style="height: 8.5rem;">
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#conceito" class="text-gray-600 hover:text-indigo-600 transition" style="align-content: center; display: flex; align-items: center;">O Conceito</a>
+                <a href="#missao" class="text-gray-600 hover:text-indigo-600 transition" style="align-content: center; display: flex; align-items: center;">Nossa Missão</a>
+                <a href="#jornada" class="text-gray-600 hover:text-indigo-600 transition" style="align-content: center; display: flex; align-items: center;">A Jornada</a>
+                <a href="#participe" class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition" style="align-content: center; display: flex; align-items: center;">Participe</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <main class="container mx-auto px-6 py-16 md:py-24 text-center">
+        <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4">
+            Aprender. Entender. Dominar.
+        </h1>
+        <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+            Uma jornada de mentoria gratuita que une os saberes ancestrais formadores do Brasil para construir o seu futuro.
+        </p>
+        <a href="#participe" class="bg-indigo-600 text-white px-8 py-3 rounded-full font-semibold text-lg hover:bg-indigo-700 transition transform hover:scale-105">
+            Quero fazer parte
+        </a>
+    </main>
+
+    <!-- Concept Section -->
+    <section id="conceito" class="py-20 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-12">A Essência do TIE</h2>
+            <p class="max-w-3xl mx-auto text-gray-600 mb-16">
+                TIE é um anagrama que representa a união de três pilares do conhecimento, refletidos nos idiomas que moldaram nossa cultura. Cada letra é um convite a uma nova forma de ver o mundo.
+            </p>
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <!-- Card Tupi -->
+                <div class="bg-emerald-50 p-8 rounded-lg shadow-lg border-t-4 border-emerald-500">
+                    <h3 class="text-5xl font-bold text-emerald-600 mb-4">E</h3>
+                    <h4 class="text-xl font-semibold mb-2">Eîá (Tupi)</h4>
+                    <p class="text-emerald-800">
+                        <span class="font-bold">Aprender.</span> A sabedoria dos povos originários, que nos ensina a aprender com a natureza, a comunidade e a experiência contínua da vida.
+                    </p>
+                </div>
+
+                <!-- Card Latim -->
+                <div class="bg-red-50 p-8 rounded-lg shadow-lg border-t-4 border-red-500">
+                    <h3 class="text-5xl font-bold text-red-600 mb-4">I</h3>
+                    <h4 class="text-xl font-semibold mb-2">Intelligere (Latim)</h4>
+                    <p class="text-red-800">
+                        <span class="font-bold">Entender.</span> A base do pensamento lógico e da estruturação do conhecimento ocidental, que nos convida a compreender o mundo e a nós mesmos.
+                    </p>
+                </div>
+
+                <!-- Card Yorubá -->
+                <div class="bg-sky-50 p-8 rounded-lg shadow-lg border-t-4 border-sky-500">
+                    <h3 class="text-5xl font-bold text-sky-600 mb-4">T</h3>
+                    <h4 class="text-xl font-semibold mb-2">Titunto (Yorubá)</h4>
+                    <p class="text-sky-800">
+                        <span class="font-bold">Dominar.</span> A maestria e a força do conhecimento ancestral africano, que nos ensina a dominar nossas habilidades e a trilhar nossos próprios caminhos.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section id="missao" class="py-20">
+        <div class="container mx-auto px-6 text-center max-w-4xl">
+            <h2 class="text-3xl font-bold mb-12">Nossa Missão: Conhecimento Livre</h2>
+            <p class="text-lg text-gray-600">
+                O Projeto TIE nasceu do desejo de democratizar o acesso à mentoria de qualidade. Acreditamos que todos têm o direito de aprender, entender e dominar suas jornadas. Por isso, nosso programa é e sempre será **100% gratuito**. Nossa missão é criar uma ponte entre mentores experientes e pessoas em busca de desenvolvimento, fortalecendo nossa comunidade através da partilha de saberes.
+            </p>
+        </div>
+    </section>
+
+    <!-- How it Works Section -->
+    <section id="jornada" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16" style="display: block;">A Jornada da Mentoria</h2>
+            <div class="max-w-2xl mx-auto relative">
+                <!-- Timeline Line -->
+                <div class="absolute left-4 top-0 h-full w-0.5 bg-indigo-200"></div>
+                
+                <!-- Step 1 -->
+                <div class="relative mb-12">
+                    <div class="absolute left-4 top-4 -ml-2 h-4 w-4 rounded-full bg-indigo-600"></div>
+                    <div class="ml-12">
+                        <h4 class="text-xl font-semibold mb-1">Passo 1: Inscrição</h4>
+                        <p class="text-gray-600">Você se inscreve como mentor(a) ou mentorado(a) através de um formulário simples, contando sobre seus objetivos e experiências.</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative mb-12">
+                    <div class="absolute left-4 top-4 -ml-2 h-4 w-4 rounded-full bg-indigo-600"></div>
+                    <div class="ml-12">
+                        <h4 class="text-xl font-semibold mb-1">Passo 2: Conexão</h4>
+                        <p class="text-gray-600">Nossa equipe analisa os perfis para criar conexões significativas, unindo mentorados e mentores com sinergia de propósito.</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative mb-12">
+                    <div class="absolute left-4 top-4 -ml-2 h-4 w-4 rounded-full bg-indigo-600"></div>
+                    <div class="ml-12">
+                        <h4 class="text-xl font-semibold mb-1">Passo 3: Desenvolvimento</h4>
+                        <p class="text-gray-600">Iniciam-se os ciclos de mentoria, com encontros para definir metas, trocar experiências e acompanhar o progresso.</p>
+                    </div>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="relative">
+                    <div class="absolute left-4 top-4 -ml-2 h-4 w-4 rounded-full bg-indigo-600"></div>
+                    <div class="ml-12">
+                        <h4 class="text-xl font-semibold mb-1">Passo 4: Comunidade</h4>
+                        <p class="text-gray-600">Todos os participantes se juntam à nossa comunidade, uma rede de apoio para continuar aprendendo e colaborando.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section id="participe" class="py-20 bg-indigo-700 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-4">Faça Parte Desta Jornada</h2>
+            <p class="text-indigo-200 max-w-2xl mx-auto mb-8">
+                Seja para guiar alguém com sua experiência ou para ser guiado em busca de seus objetivos, sua participação é o que move nosso projeto.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-4">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeQo9vO_VvoxTwdosBBi6eHGORK4uBTwSeftcgX4c1edpgWCg/viewform?usp=header" target="_blank" class="bg-white text-indigo-700 font-semibold px-8 py-3 rounded-full w-full md:w-auto hover:bg-gray-100 transition transform hover:scale-105">
+                    Quero ser Mentorado(a)
+                </a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLScOXXXKzzme1fxxgeM8IaunPDrTq8XASiD2hHZF3jO0m15jgw/viewform?usp=header" target="_blank" class="bg-emerald-500 text-white font-semibold px-8 py-3 rounded-full w-full md:w-auto hover:bg-emerald-600 transition transform hover:scale-105">
+                    Quero ser Mentor(a)
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-400 py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 Projeto TIE. Todos os direitos reservados.</p>
+            <p class="text-sm mt-2">Conectando Saberes, Construindo Futuros.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
