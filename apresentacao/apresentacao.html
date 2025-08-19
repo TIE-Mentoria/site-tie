@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apresentação do Projeto de Mentoria TIE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow: hidden;
+        }
+        .slide {
+            min-height: 100vh;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.6s ease-in-out, visibility 0.6s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+        }
+        .slide.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        .nav-button {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 1rem;
+            cursor: pointer;
+            z-index: 1000;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+        .nav-button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        #prevBtn {
+            left: 20px;
+        }
+        #nextBtn {
+            right: 20px;
+        }
+        .slide-counter {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            z-index: 1000;
+        }
+        /* Definição das cores do projeto */
+        :root {
+            --cor-vermelho-latim: #B91C1C; /* red-700 */
+            --cor-azul-yoruba: #1D4ED8; /* blue-700 */
+            --cor-verde-tupi: #047857; /* green-700 */
+        }
+        .bg-tupi { background-color: var(--cor-verde-tupi); }
+        .text-tupi { color: var(--cor-verde-tupi); }
+        .bg-yoruba { background-color: var(--cor-azul-yoruba); }
+        .text-yoruba { color: var(--cor-azul-yoruba); }
+        .bg-latim { background-color: var(--cor-vermelho-latim); }
+        .text-latim { color: var(--cor-vermelho-latim); }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+    <!-- Slide 1: Tela de Título -->
+    <section class="slide active" style="background-image: linear-gradient(rgba(2, 2, 2, 0.7), rgba(0, 0, 0, 0.7))">
+        <div class="max-w-4xl mx-auto">
+            <div class="flex justify-center mb-8">
+                <img src="../assets/icon-TIE.png" alt="Logo do Projeto TIE" style="height: 15rem;">
+            </div>
+            <h1 class="text-4xl md:text-6xl font-black uppercase tracking-wider">Projeto TIE</h1>
+            <p class="text-2xl md:text-4xl mt-4 font-light text-tupi">Mentoria Gratuita para Desenvolvedores</p>
+            <p class="text-lg md:text-xl mt-4 text-gray-300 max-w-2xl mx-auto">
+                Ensinar • Mentorar • Preparar para o Mercado<br>
+                <span class="text-yoruba font-semibold">Projetos Práticos • Ferramentas Modernas • 100% Gratuito</span>
+            </p>
+            <div class="mt-12 border-t-2 border-gray-500 pt-6">
+                <p class="text-2xl font-bold">Pedro Galocha</p>
+                <p class="text-lg text-gray-300">Desenvolvedor Senior & Mentor</p>
+                <p class="text-sm text-gray-400 mt-2">Transformando iniciantes em profissionais preparados para o mercado tech</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 2: O Poder da Mentoria -->
+    <section class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6))">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl md:text-5xl font-bold mb-8">Por que Mentoria Gratuita em Tech?</h2>
+            <p class="text-xl mb-6 text-gray-300">O mercado de tecnologia precisa de mais profissionais qualificados, mas muitos têm dificuldade em <strong>começar</strong> ou <strong>evoluir</strong> sozinhos.</p>
+            <ul class="text-left space-y-4 text-lg md:text-xl max-w-3xl mx-auto">
+                <li class="bg-gray-800/50 p-4 rounded-lg">
+                    <span class="text-2xl mr-3">🚀</span><span class="font-bold text-tupi">Acelera o aprendizado:</span> 
+                    <span class="text-gray-300">Evita perda de tempo com caminhos errados</span>
+                </li>
+                <li class="bg-gray-800/50 p-4 rounded-lg">
+                    <span class="text-2xl mr-3">💡</span><span class="font-bold text-yoruba">Experiência real:</span> 
+                    <span class="text-gray-300">Insights práticos do dia a dia profissional</span>
+                </li>
+                <li class="bg-gray-800/50 p-4 rounded-lg">
+                    <span class="text-2xl mr-3">🎯</span><span class="font-bold text-latim">Foco no mercado:</span> 
+                    <span class="text-gray-300">Preparação específica para processos seletivos</span>
+                </li>
+                <li class="bg-gray-800/50 p-4 rounded-lg">
+                    <span class="text-2xl mr-3">�</span><span class="font-bold text-green-400">Network:</span> 
+                    <span class="text-gray-300">Conexões valiosas na indústria tech</span>
+                </li>
+                <li class="bg-gray-800/50 p-4 rounded-lg">
+                    <span class="text-2xl mr-3">💪</span><span class="font-bold text-purple-400">Confiança:</span> 
+                    <span class="text-gray-300">Reduz a ansiedade e aumenta a autoestima técnica</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Slide 3: Apresentando o Projeto TIE -->
+    <section class="slide bg-gray-800">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl md:text-5xl font-bold mb-4">Projeto TIE</h2>
+            <p class="text-2xl md:text-4xl font-light mb-8 text-gray-300">Mentoria Gratuita para Desenvolvedores</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-lg my-8">
+                <div class="bg-gray-900 p-6 rounded-lg border-l-4 border-tupi">
+                    <h3 class="font-bold text-xl mb-2 text-tupi">🎯 Nossa Missão</h3>
+                    <p>Ensinar e mentorar desenvolvedores de forma <strong>100% gratuita</strong>, preparando-os para o mercado de trabalho com ferramentas modernas e metodologias eficazes.</p>
+                </div>
+                <div class="bg-gray-900 p-6 rounded-lg border-l-4 border-yoruba">
+                    <h3 class="font-bold text-xl mb-2 text-yoruba">🚀 Como Fazemos</h3>
+                    <p>Através de <strong>projetos práticos</strong>, metodologia estruturada de trabalho e mentoria individualizada para acelerar seu desenvolvimento profissional.</p>
+                </div>
+                <div class="bg-gray-900 p-6 rounded-lg border-l-4 border-latim">
+                    <h3 class="font-bold text-xl mb-2 text-latim">💻 Foco Tecnológico</h3>
+                    <p>Capacitação em <strong>ferramentas modernas</strong> e práticas atuais da indústria, preparando você para os desafios reais do desenvolvimento.</p>
+                </div>
+                <div class="bg-gray-900 p-6 rounded-lg border-l-4 border-gray-500">
+                    <h3 class="font-bold text-xl mb-2 text-gray-300">🎓 Resultado</h3>
+                    <p>Desenvolvedores <strong>confiantes e preparados</strong> para ingressar ou evoluir no mercado de trabalho tech.</p>
+                </div>
+            </div>
+            <div class="flex justify-center items-center space-x-8 mt-10">
+                <img src="../assets/icon-TIE.png" alt="Ícone TIE" class="h-24">
+                <img src="../assets/logo_tie.png" alt="Logo Completo TIE" class="h-20">
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 4: A Essência do TIE -->
+    <section class="slide bg-gray-900">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl md:text-5xl font-bold mb-8">TIE: Uma Abordagem Holística para o Aprendizado</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-tupi/10 border-2 border-tupi p-6 rounded-xl shadow-lg shadow-tupi/20">
+                    <h3 class="text-5xl font-black text-tupi">E</h3>
+                    <p class="text-2xl font-bold mt-2">Eîá (Tupi)</p>
+                    <p class="text-lg font-light text-gray-300">Aprender</p>
+                    <p class="mt-4 text-gray-400">Cultura de aprendizado contínuo, adaptabilidade e curiosidade no cenário tecnológico em constante evolução.</p>
+                </div>
+                <div class="bg-yoruba/10 border-2 border-yoruba p-6 rounded-xl shadow-lg shadow-yoruba/20">
+                    <h3 class="text-5xl font-black text-yoruba">I</h3>
+                    <p class="text-2xl font-bold mt-2">Intelligere (Latim)</p>
+                    <p class="text-lg font-light text-gray-300">Entender</p>
+                    <p class="mt-4 text-gray-400">Ênfase na compreensão dos fundamentos, princípios e teorias por trás das tecnologias.</p>
+                </div>
+                <div class="bg-latim/10 border-2 border-latim p-6 rounded-xl shadow-lg shadow-latim/20">
+                    <h3 class="text-5xl font-black text-latim">T</h3>
+                    <p class="text-2xl font-bold mt-2">Titunto (Yorubá)</p>
+                    <p class="text-lg font-light text-gray-300">Dominar</p>
+                    <p class="mt-4 text-gray-400">Foco em adquirir proficiência técnica e expertise em áreas específicas da tecnologia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 5: Trilhas de Aprendizado -->
+    <section class="slide bg-gray-800">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl md:text-5xl font-bold mb-6">Áreas de Mentoria e Desenvolvimento</h2>
+            <p class="text-xl mb-8 text-gray-300">Oferecemos mentoria especializada em diversas áreas tech, sempre com foco em <strong>projetos práticos</strong> e <strong>preparação para o mercado</strong>:</p>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-6 text-center">
+                <div class="bg-gray-900 p-6 rounded-lg hover:bg-gray-700 transition-colors">
+                    <div class="text-3xl mb-2">💻</div>
+                    <h3 class="font-bold mb-2">Desenvolvimento Web</h3>
+                    <p class="text-sm text-gray-400">Frontend, Backend, Full Stack</p>
+                </div>
+                <div class="bg-gray-900 p-6 rounded-lg hover:bg-gray-700 transition-colors">
+                    <div class="text-3xl mb-2">📱</div>
+                    <h3 class="font-bold mb-2">Desenvolvimento Mobile</h3>
+                    <p class="text-sm text-gray-400">React Native, Flutter, Nativo</p>
+                </div>
+                <div class="bg-gray-900 p-6 rounded-lg hover:bg-gray-700 transition-colors">
+                    <div class="text-3xl mb-2">🤖</div>
+                    <h3 class="font-bold mb-2">Ciência de Dados & IA</h3>
+                    <p class="text-sm text-gray-400">Python, Machine Learning, Analytics</p>
+                </div>
+                <div class="bg-gray-900 p-6 rounded-lg hover:bg-gray-700 transition-colors">
+                    <div class="text-3xl mb-2">⚙️</div>
+                    <h3 class="font-bold mb-2">DevOps & Infraestrutura</h3>
+                    <p class="text-sm text-gray-400">CI/CD, Docker, Kubernetes</p>
+                </div>
+                <div class="bg-gray-900 p-6 rounded-lg hover:bg-gray-700 transition-colors">
+                    <div class="text-3xl mb-2">🛡️</div>
+                    <h3 class="font-bold mb-2">Segurança</h3>
+                    <p class="text-sm text-gray-400">Ethical Hacking, Pentesting</p>
+                </div>
+                <div class="bg-gray-900 p-6 rounded-lg hover:bg-gray-700 transition-colors">
+                    <div class="text-3xl mb-2">☁️</div>
+                    <h3 class="font-bold mb-2">Cloud Computing</h3>
+                    <p class="text-sm text-gray-400">AWS, Azure, Google Cloud</p>
+                </div>
+            </div>
+            <div class="mt-8 bg-tupi/20 border border-tupi p-4 rounded-lg">
+                <p class="text-tupi font-bold">💡 Metodologia Baseada em Projetos:</p>
+                <p class="text-gray-300 mt-2">Cada área inclui projetos reais que você desenvolverá durante a mentoria, construindo um portfólio sólido para o mercado de trabalho.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 6: Plano de Mentoria -->
+    <section class="slide" style="background-image: linear-gradient(rgba(17, 24, 39, 0.8), rgba(17, 24, 39, 0.8))">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl md:text-5xl font-bold mb-8">Como Funciona a Mentoria TIE</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <div class="bg-gray-800/70 p-6 rounded-lg border-l-4 border-tupi">
+                    <h3 class="font-bold text-xl mb-3 text-tupi">🎯 Metodologia Estruturada</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li>✅ Avaliação inicial de conhecimentos e objetivos</li>
+                        <li>✅ Plano de desenvolvimento personalizado</li>
+                        <li>✅ Projetos práticos progressivos</li>
+                        <li>✅ Reviews de código e feedback contínuo</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-800/70 p-6 rounded-lg border-l-4 border-yoruba">
+                    <h3 class="font-bold text-xl mb-3 text-yoruba">💼 Preparação para o Mercado</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li>✅ Simulação de entrevistas técnicas</li>
+                        <li>✅ Construção de portfólio profissional</li>
+                        <li>✅ Orientação para criação de CV tech</li>
+                        <li>✅ Networking e conexões da indústria</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bg-gray-900/70 p-6 rounded-lg">
+                <h3 class="font-bold text-xl mb-4 text-center text-latim">🔄 Processo de Mentoria</h3>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4 text-center text-sm">
+                    <div class="bg-gray-800 p-4 rounded">
+                        <div class="font-bold text-tupi">1. AVALIAR</div>
+                        <p class="mt-2 text-gray-300">Análise do perfil e objetivos</p>
+                    </div>
+                    <div class="bg-gray-800 p-4 rounded">
+                        <div class="font-bold text-yoruba">2. PLANEJAR</div>
+                        <p class="mt-2 text-gray-300">Trilha personalizada</p>
+                    </div>
+                    <div class="bg-gray-800 p-4 rounded">
+                        <div class="font-bold text-latim">3. EXECUTAR</div>
+                        <p class="mt-2 text-gray-300">Projetos e mentorias</p>
+                    </div>
+                    <div class="bg-gray-800 p-4 rounded">
+                        <div class="font-bold text-green-400">4. EVOLUIR</div>
+                        <p class="mt-2 text-gray-300">Preparação final</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 7: Metodologia -->
+    <section class="slide bg-gray-800">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl md:text-5xl font-bold mb-8">Metodologia TIE: Aprender Fazendo</h2>
+            <p class="text-xl text-gray-300 mb-8 text-center">Nossa abordagem prática prepara você para os <strong>desafios reais</strong> do mercado de trabalho</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-gray-900 p-6 rounded-lg border-t-4 border-tupi">
+                    <h3 class="font-bold text-xl mb-3 text-tupi">🛠️ Projetos Práticos</h3>
+                    <ul class="text-gray-400 space-y-1 text-sm">
+                        <li>• Desenvolvimento de aplicações reais</li>
+                        <li>• Resolução de problemas complexos</li>
+                        <li>• Ferramentas modernas da indústria</li>
+                        <li>• Portfolio profissional desde o início</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-900 p-6 rounded-lg border-t-4 border-yoruba">
+                    <h3 class="font-bold text-xl mb-3 text-yoruba">🎯 Metodologia de Trabalho</h3>
+                    <ul class="text-gray-400 space-y-1 text-sm">
+                        <li>• Metodologias ágeis (Scrum, Kanban)</li>
+                        <li>• Controle de versão (Git/GitHub)</li>
+                        <li>• Code review e boas práticas</li>
+                        <li>• Documentação técnica</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-900 p-6 rounded-lg border-t-4 border-latim">
+                    <h3 class="font-bold text-xl mb-3 text-latim">🚀 Preparação Mercado</h3>
+                    <ul class="text-gray-400 space-y-1 text-sm">
+                        <li>• Simulação de ambiente corporativo</li>
+                        <li>• Soft skills para desenvolvedor</li>
+                        <li>• Preparação para entrevistas</li>
+                        <li>• Networking profissional</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-900 p-6 rounded-lg border-t-4 border-gray-500">
+                    <h3 class="font-bold text-xl mb-3 text-gray-300">📈 Acompanhamento</h3>
+                    <ul class="text-gray-400 space-y-1 text-sm">
+                        <li>• Feedback personalizado e contínuo</li>
+                        <li>• Avaliações de progresso regulares</li>
+                        <li>• Ajustes na trilha de aprendizado</li>
+                        <li>• Mentoria individual focada</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-8 bg-gradient-to-r from-tupi/20 to-yoruba/20 border-l-4 border-latim p-4 rounded-lg">
+                <p class="font-bold text-lg">💡 Resultado:</p>
+                <p class="text-gray-300 mt-1">Desenvolvedores confiantes, com experiência prática e prontos para conquistar sua vaga no mercado tech!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 8: O Mentor -->
+    <section class="slide bg-gray-900">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl md:text-5xl font-bold mb-8">Conheça seu Mentor</h2>
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <img src="https://placehold.co/300x300/FFFFFF/000000?text=Sua+Foto" alt="Foto de Pedro Galocha" class="w-48 h-48 rounded-full object-cover border-4 border-gray-700">
+                <div class="text-left">
+                    <h3 class="text-3xl font-bold">Pedro Galocha</h3>
+                    <p class="text-xl text-gray-400">Dev Senior</p>
+                    <p class="mt-4 bg-gray-800 p-4 rounded-lg">
+                        <span class="font-bold">Biografia:</span> [Seus anos de experiência, principais tecnologias que domina, projetos relevantes em que trabalhou, sua paixão por compartilhar conhecimento].
+                    </p>
+                     <p class="mt-4 bg-gray-800 p-4 rounded-lg">
+                        <span class="font-bold">Filosofia de Mentoria:</span> [Sua abordagem para guiar e desenvolver talentos, o que você espera dos mentorados].
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 9: Quem Pode Participar -->
+    <section class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7))">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl md:text-5xl font-bold mb-8">Quem Pode Participar da Mentoria TIE?</h2>
+            <p class="text-xl mb-8 text-gray-300">Nossa mentoria <strong>gratuita</strong> é para pessoas com paixão por tecnologia que querem:</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <div class="bg-gray-800/80 p-6 rounded-lg">
+                    <h3 class="font-bold text-lg mb-4 text-tupi">✨ Perfil Ideal</h3>
+                    <ul class="space-y-2 text-sm text-left">
+                        <li class="flex items-center"><span class="text-green-400 mr-2">✓</span>Disposição para aprender</li>
+                        <li class="flex items-center"><span class="text-green-400 mr-2">✓</span>Comprometimento com projetos</li>
+                        <li class="flex items-center"><span class="text-green-400 mr-2">✓</span>Vontade de ingressar/evoluir no mercado tech</li>
+                        <li class="flex items-center"><span class="text-green-400 mr-2">✓</span>Disponibilidade para mentoria regular</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-800/80 p-6 rounded-lg">
+                    <h3 class="font-bold text-lg mb-4 text-yoruba">🎯 Nosso Foco</h3>
+                    <ul class="space-y-2 text-sm text-left">
+                        <li class="flex items-center"><span class="text-blue-400 mr-2">→</span>Preparação para primeiro emprego tech</li>
+                        <li class="flex items-center"><span class="text-blue-400 mr-2">→</span>Transição de carreira para tecnologia</li>
+                        <li class="flex items-center"><span class="text-blue-400 mr-2">→</span>Upgrade de habilidades técnicas</li>
+                        <li class="flex items-center"><span class="text-blue-400 mr-2">→</span>Desenvolvimento de soft skills</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mb-8">
+                <h3 class="text-xl font-bold mb-4">👥 Categorias de Participantes</h3>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <span class="bg-tupi text-white px-4 py-2 rounded-full text-sm">🎓 Estudantes de TI</span>
+                    <span class="bg-yoruba text-white px-4 py-2 rounded-full text-sm">🚀 Iniciantes em Programação</span>
+                    <span class="bg-latim text-white px-4 py-2 rounded-full text-sm">🔄 Transição de Carreira</span>
+                    <span class="bg-gray-700 text-white px-4 py-2 rounded-full text-sm">💻 Desenvolvedores Juniores</span>
+                    <span class="bg-purple-600 text-white px-4 py-2 rounded-full text-sm">🎯 Autoditadas em Tech</span>
+                </div>
+            </div>
+
+            <div class="bg-green-900/30 border border-green-500 p-4 rounded-lg">
+                <p class="font-bold text-green-400">💚 Lembre-se: É 100% GRATUITO!</p>
+                <p class="text-gray-300 mt-1">Nossa missão é democratizar o acesso ao conhecimento tech e ajudar você a conquistar seu espaço no mercado.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 10: Chamada para Ação -->
+    <section class="slide bg-gray-800">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl md:text-5xl font-bold mb-4">Dê o Próximo Passo na Sua Jornada!</h2>
+            <p class="text-lg text-gray-300 mb-8">Acesse, preencha o formulário e siga nossas redes.</p>
+            <div class="space-y-4 max-w-md mx-auto">
+                <a href="#" class="block w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg text-xl transition-transform hover:scale-105">1. Acesse o Site e Inscreva-se</a>
+                <a href="#" class="block w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg text-xl transition-transform hover:scale-105">2. Siga nas Redes Sociais</a>
+                <a href="mailto:seu-email@exemplo.com" class="block w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg text-xl transition-transform hover:scale-105">3. Envie suas Dúvidas</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 11: Perguntas e Respostas -->
+    <section class="slide bg-gray-900">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-6xl font-black text-gray-700 mb-4">?</h2>
+            <h2 class="text-4xl md:text-6xl font-bold">Dúvidas?</h2>
+            <p class="text-2xl text-gray-400 mt-2">Vamos Conversar!</p>
+        </div>
+    </section>
+
+    <!-- Slide 12: Agradecimento -->
+    <section class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7))">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-5xl md:text-7xl font-black">Obrigado!</h2>
+            <p class="text-xl mt-4 text-gray-300">Agradecemos pela sua atenção e interesse no Projeto TIE.</p>
+            <img src="../assets/icon-TIE.png" alt="Logo do Projeto TIE" class="mx-auto mt-12" style="height: 15rem;">
+            <p class="mt-4 text-lg">Pedro Galocha | seu-email@exemplo.com</p>
+        </div>
+    </section>
+
+
+    <!-- Navegação -->
+    <button id="prevBtn" class="nav-button">&lt;</button>
+    <button id="nextBtn" class="nav-button">&gt;</button>
+    <div id="slideCounter" class="slide-counter"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const slides = document.querySelectorAll('.slide');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const slideCounter = document.getElementById('slideCounter');
+            let currentSlide = 0;
+
+            function showSlide(index) {
+                slides.forEach((slide, i) => {
+                    slide.classList.toggle('active', i === index);
+                });
+                slideCounter.textContent = `${index + 1} / ${slides.length}`;
+                // Esconde o botão 'anterior' no primeiro slide
+                prevBtn.style.display = index === 0 ? 'none' : 'flex';
+                // Esconde o botão 'próximo' no último slide
+                nextBtn.style.display = index === slides.length - 1 ? 'none' : 'flex';
+            }
+
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % slides.length;
+                showSlide(currentSlide);
+            }
+
+            function prevSlide() {
+                currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+                showSlide(currentSlide);
+            }
+
+            nextBtn.addEventListener('click', nextSlide);
+            prevBtn.addEventListener('click', prevSlide);
+
+            // Navegação pelo teclado
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowRight' && currentSlide < slides.length - 1) {
+                    nextSlide();
+                } else if (e.key === 'ArrowLeft' && currentSlide > 0) {
+                    prevSlide();
+                }
+            });
+
+            // Inicia a apresentação
+            showSlide(currentSlide);
+        });
+    </script>
+</body>
+</html>
